@@ -1,15 +1,50 @@
-.title {
-    color: brown;
+h2:hover {
+  color: blue;
 }
-
 .subtitle {
-    color: teal
+  color: teal;
 }
 
 #services {
-    color: green;
+  color: red;
 }
 
-#contact-us {
+/* li:only-child {
+    color: purple;
+} */
+
+tr:nth-child(2) {
+  color: purple;
+}
+
+/* #google-link:link {
     color: blue;
+}
+
+#google-link:visited {
+    color: red;
+} */
+
+h2 + a {
+  color: green;
+}
+
+textarea ~ button {
+  color: purple;
+}
+
+ul > li {
+  color: blue;
+}
+
+ul li {
+  color: green;
+}
+
+img[src^="./images/"] {
+  border: 10px solid black;
+}
+
+h2[class~="article-subtitle"] {
+  background: green;
 }

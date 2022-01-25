@@ -1,50 +1,11 @@
-h2:hover {
-  color: blue;
+body {
+  background: url("./images/green-leaves.jpg");
 }
+
+#title {
+  color: rgb(11, 88, 4);
+}
+
 .subtitle {
-  color: teal;
-}
-
-#services {
-  color: red;
-}
-
-/* li:only-child {
-    color: purple;
-} */
-
-tr:nth-child(2) {
-  color: purple;
-}
-
-/* #google-link:link {
-    color: blue;
-}
-
-#google-link:visited {
-    color: red;
-} */
-
-h2 + a {
-  color: green;
-}
-
-textarea ~ button {
-  color: purple;
-}
-
-ul > li {
-  color: blue;
-}
-
-ul li {
-  color: green;
-}
-
-img[src^="./images/"] {
-  border: 10px solid black;
-}
-
-h2[class~="article-subtitle"] {
-  background: green;
+  color: rgb(134, 104, 19);
 }

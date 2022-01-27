@@ -1,11 +1,22 @@
 body {
-  background: url("./images/green-leaves.jpg");
+  text-transform: capitalize;
+  font-size: 1.15em;
+  text-align: justify;
 }
 
 #title {
   color: rgb(11, 88, 4);
+  font-weight: 400;
 }
 
 .subtitle {
   color: rgb(134, 104, 19);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.italics {
+  font-style: italic;
 }

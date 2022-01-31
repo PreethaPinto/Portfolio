@@ -40,11 +40,15 @@ body {
 .container {
   background-color: rgb(220, 241, 220);
   margin: 10px;
+  height: 300px;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
 .container-item {
   background: green;
   color: white;

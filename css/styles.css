@@ -1,16 +1,17 @@
 body {
-  text-transform: capitalize;
   font-size: 1.15em;
   text-align: justify;
+  font-family: "Lato", sans-serif;
 }
 
 #title {
   color: rgb(11, 88, 4);
-  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
 }
 
 .subtitle {
   color: rgb(134, 104, 19);
+  font-family: "PT Sans", sans-serif;
 }
 
 .link {
@@ -19,4 +20,37 @@ body {
 
 .italics {
   font-style: italic;
+}
+
+#service-image {
+  height: 300px;
+  width: 60vw;
+  border: 6px solid brown;
+}
+
+#about-us-image {
+  height: 300px;
+  width: 60%;
+  border: 6px solid brown;
+  padding: 10px;
+  margin: 40px;
+  float: right;
+}
+
+.container {
+  background-color: rgb(220, 241, 220);
+  margin: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-item {
+  background: green;
+  color: white;
+  font-size: 25px;
+  text-align: Center;
+  width: 100px;
+  line-height: 50px;
+  margin: 10px;
 }

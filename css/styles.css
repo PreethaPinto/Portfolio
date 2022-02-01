@@ -24,13 +24,13 @@ body {
 
 #service-image {
   height: 300px;
-  width: 60vw;
+  width: 60%;
   border: 6px solid brown;
 }
 
 #about-us-image {
   height: 300px;
-  width: 60%;
+  width: 50%;
   border: 6px solid brown;
   padding: 10px;
   margin: 40px;
@@ -56,5 +56,25 @@ body {
   text-align: Center;
   width: 100px;
   line-height: 50px;
+  margin: 10px;
+}
+
+.grid-container {
+  background-color: rgb(220, 241, 220);
+  margin: 10 px;
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+}
+
+.grid-item {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+
+  width: 70px;
+  line-height: 40px;
   margin: 10px;
 }

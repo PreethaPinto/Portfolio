@@ -78,3 +78,30 @@ body {
   line-height: 40px;
   margin: 10px;
 }
+
+.submit-button {
+  margin: 20px 10px;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  background: rgb(89, 150, 255);
+  transform: translate(50px, 30px);
+  transition: background-color 300s ease-in-out;
+}
+
+.submit-button:hover {
+  background: rgb(115, 157, 230);
+  padding: 20px 30px;
+}
+
+@keyframes red-to-black {
+  from {
+    back: red;
+  }
+  to {
+  }
+}

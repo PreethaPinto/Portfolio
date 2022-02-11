@@ -7,7 +7,12 @@ Light Blue: rgb (186, 212, 255)
 'Bold Orange': rgb(229, 158, 66)
 Light Orange: rgb(255, 227, 191) */
 
-.content {
+#main {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+/* .content {
   animation-name: fade-in;
   animation-duration: 2s;
 }
@@ -15,7 +20,7 @@ Light Orange: rgb(255, 227, 191) */
 .sidebar {
   animation-name: fade-in;
   animation-duration: 2s;
-}
+} */
 
 img {
   width: 400px;
@@ -35,7 +40,7 @@ body {
 #main {
   display: grid;
   grid-template-columns: 70% 30%;
-  grid-gap: 50px;
+  gap: 0px 50px;
 }
 
 p {

@@ -28,7 +28,7 @@ img {
 }
 
 img:hover {
-  height: 250px;
+  height: 270px;
   width: 500px;
   transition: 0.5s all;
 }

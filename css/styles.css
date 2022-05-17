@@ -8,9 +8,31 @@ Teal: #45a29e;
  */
 body {
   font-family: "Comic Neue", cursive;
-  background-color: #0b0c10;
+  /* background-color: #0b0c10; */
 }
 
-h1 {
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #262830;
+  padding: 20px;
+}
+
+.sidenav a {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.sidenav a:hover {
   color: #66fcf1;
 }

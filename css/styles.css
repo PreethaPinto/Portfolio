@@ -10,10 +10,13 @@ body {
   font-family: "Comic Neue", cursive;
   /* background-color: #0b0c10; */
 }
+.main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
 
 .sidenav {
   height: 100%;
-  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -21,6 +24,7 @@ body {
   overflow: hidden;
   background-color: #1f2833;
   padding: 20px;
+  padding-top: 300px;
 }
 
 .sidenav a {
@@ -41,5 +45,5 @@ body {
 }
 
 h1 {
-  padding-left: 260px;
+  padding-top: 350px;
 }

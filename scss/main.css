@@ -1,45 +1,41 @@
-body {
-  font-family: "Montserrat", cursive;
-  background-image: url(./assets/background.jpg);
-  /* background-color: #0b0c10; */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
-.main {
-  display: grid;
-  grid-template-columns: 15% 85%;
-}
-
-.main-left {
+.navigation {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center;
-  height: 100vh;
+  justify-content: flex-end;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
-.sidenav a {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.navigation a {
   text-decoration: none;
-  font-size: 20px;
-  padding: 20px;
+  color: #fff;
+  padding-right: 150px;
+}
+.navigation a:hover {
+  color: rgb(182, 42, 42);
 }
 
-.sidenav a:hover {
-  color: orangered;
-  transform: rotate(360deg);
+#home {
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .home-section {
-  background-image: ur;
-}
-
-.intro {
   display: flex;
   align-items: center;
-  width: 800px;
+  max-width: 1200px;
+  margin: auto;
   height: 100vh;
-  margin-left: 100px;
 }
 
 .intro-text {
@@ -47,14 +43,47 @@ body {
   font-size: 25px;
 }
 
-.name {
-  color: orangered;
+.intro-text .name {
+  color: rgb(182, 42, 42);
   font-weight: 700;
   font-size: 30px;
 }
 
 .about-section {
-  color: #fff;
+  color: #000;
+  font-size: 18px;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 100px;
+  text-align: justify;
+  line-height: 1.8;
+}
+.about-section h2 {
+  text-align: center;
+}
+.about-section p {
+  font-size: larger;
+}
+.about-section .tech-section {
+  margin-top: 80px;
+}
+.about-section .tech-section h3 {
+  text-align: center;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tech-stack li {
+  list-style: none;
+  padding: 20px;
+  border: 2px solid rgb(182, 42, 42);
+  border-radius: 10px;
+  margin: 20px;
+  font-weight: 700;
 }
 
 .resume-section {
@@ -62,9 +91,9 @@ body {
 }
 
 .projects-section {
-  color: #fff;
+  color: #000;
 }
 
 .contact-section {
-  color: #fff;
+  color: #000;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
 }
@@ -8,11 +9,11 @@ html, body {
 .navigation {
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #000;
   display: flex;
   justify-content: flex-end;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .navigation a {
   text-decoration: none;
@@ -54,7 +55,8 @@ html, body {
   font-size: 18px;
   max-width: 1200px;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: justify;
   line-height: 1.8;
 }
@@ -86,14 +88,34 @@ html, body {
   font-weight: 700;
 }
 
-.resume-section {
-  background-color: #fff;
+.contact {
+  background-color: #1d1c1c;
+  color: #fff;
+  text-align: center;
 }
-
-.projects-section {
-  color: #000;
+.contact .contact-section {
+  font-size: 18px;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  letter-spacing: 1px;
 }
-
-.contact-section {
-  color: #000;
+.contact h2 {
+  text-align: center;
+}
+.contact .contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-info .info {
+  border: 2px solid rgb(182, 42, 42);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 40px;
+  width: 300px;
+  letter-spacing: 1px;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */

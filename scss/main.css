@@ -1,0 +1,70 @@
+body {
+  font-family: "Montserrat", cursive;
+  background-image: url(./assets/background.jpg);
+  /* background-color: #0b0c10; */
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.main-left {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.sidenav a {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.sidenav a:hover {
+  color: orangered;
+  transform: rotate(360deg);
+}
+
+.home-section {
+  background-image: ur;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 100vh;
+  margin-left: 100px;
+}
+
+.intro-text {
+  color: #fff;
+  font-size: 25px;
+}
+
+.name {
+  color: orangered;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.about-section {
+  color: #fff;
+}
+
+.resume-section {
+  background-color: #fff;
+}
+
+.projects-section {
+  color: #fff;
+}
+
+.contact-section {
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

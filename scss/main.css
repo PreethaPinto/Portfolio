@@ -6,29 +6,48 @@ html, body {
   box-sizing: border-box;
 }
 
-.navigation {
+.header {
   position: fixed;
   width: 100%;
   background-color: #000;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  color: #ff3c78;
+  margin-left: 100px;
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: 5px 10px 10px #461121;
+}
+.header .navigation {
+  display: flex;
   justify-content: flex-end;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-right: 100px;
 }
-.navigation a {
+.header .navigation a {
   text-decoration: none;
   color: #fff;
-  padding-right: 150px;
+  margin-left: 100px;
+  letter-spacing: 0.5px;
+  box-shadow: 5px 10px 10px #461121;
 }
-.navigation a:hover {
-  color: rgb(182, 42, 42);
+.header .navigation a:hover {
+  color: #ff3c78;
+}
+
+.active {
+  color: #ff3c78;
 }
 
 #home {
   background-image: url(./assets/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-size: cover;
 }
 
 .home-section {
@@ -38,16 +57,53 @@ html, body {
   margin: auto;
   height: 100vh;
 }
-
-.intro-text {
+.home-section .intro-text {
   color: #fff;
-  font-size: 25px;
+  font-size: 30px;
+}
+.home-section .name {
+  color: #ff3c78;
+  font-weight: 700;
+  font-size: 40px;
+  box-shadow: 5px 10px 10px #461121;
 }
 
-.intro-text .name {
-  color: rgb(182, 42, 42);
-  font-weight: 700;
+.intro-links {
+  display: flex;
+  align-items: center;
   font-size: 30px;
+}
+.intro-links .social-icon {
+  margin-right: 20px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: transparent;
+  color: #ff3c78;
+  transition: 0.6s, ease;
+  transition-property: background-color, color;
+}
+.intro-links .social-icon:hover {
+  background-color: #ff3c78;
+  color: #000;
+}
+.intro-links .icon {
+  line-height: 1.4;
+}
+.intro-links .resume {
+  font-size: 16px;
+  border: 2px solid #ff3c78;
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s, ease;
+  transition-property: background-color, color;
+}
+.intro-links .resume:hover {
+  background-color: #ff3c78;
 }
 
 .about-section {
@@ -59,6 +115,9 @@ html, body {
   padding-bottom: 200px;
   text-align: justify;
   line-height: 1.8;
+}
+.about-section .diploma {
+  font-weight: 700;
 }
 .about-section h2 {
   text-align: center;
@@ -75,6 +134,7 @@ html, body {
 
 .tech-stack {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -82,10 +142,10 @@ html, body {
 .tech-stack li {
   list-style: none;
   padding: 20px;
-  border: 2px solid rgb(182, 42, 42);
-  border-radius: 10px;
+  border: 2px solid #ff3c78;
   margin: 20px;
   font-weight: 700;
+  box-shadow: 5px 10px 10px #461121;
 }
 
 .contact {
@@ -111,11 +171,12 @@ html, body {
   align-items: center;
 }
 .contact .contact-info .info {
-  border: 2px solid rgb(182, 42, 42);
-  border-radius: 10px;
+  border: 2px solid #ff3c78;
+  box-shadow: 5px 10px 10px #461121;
   margin: 20px;
   padding: 40px;
   width: 300px;
   letter-spacing: 1px;
   font-size: 20px;
+  line-height: 1.8;
 }/*# sourceMappingURL=main.css.map */

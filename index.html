@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,21 +13,34 @@
   </head>
 
   <body>    
-      <div class="navigation">
-          <a href="#home">HOME</a>
-          <a href="#about"> ABOUT</a>
-          <a href="#projects">PROJECTS</a>
-          <a href="#contact" > CONTACT</a>  
+        <div class="header">
+          <div class="logo">
+            PCP
+          </div>
+          <div class="navigation">
+          <a href="#home" class="nav-link" onclick="activateLink(this)" >HOME</a>
+          <a href="#about" class="nav-link" onclick="activateLink(this)"> ABOUT</a>
+          <a href="#projects" class="nav-link" onclick="activateLink(this)" >PROJECTS</a>
+          <a href="#contact" class="nav-link" onclick="activateLink(this)"> CONTACT</a>  
+          
+        </div>
       </div>
+      
  
       <div id="home">
       <div class="home-section">
       <div class="intro-text">
         <p>
-        Hello! <br />
+        Hey there! <br />
         My name is <span class="name">Preetha Pinto</span>. <br />
         I am a full stack developer based in Brisbane, Australia.
         </p>
+        <div class="intro-links">
+          <a href="https://www.linkedin.com/in/preetha-pinto/" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in icon"></i></a>
+          <a href="https://github.com/PreethaPinto" target="_blank" class="social-icon"><i class="fa-brands fa-github icon"></i></a>
+          <a href="./documents/Preetha_Pinto_Resume.docx" class="resume">Download Resume</a>
+      </div>
+      </div>
       </div>
     </div>
   </div>
@@ -36,8 +50,12 @@
         ABOUT ME
       </h2>
         <p>
-        I used to spend my days fixing smiles as a dentist, but recently, I've taken a sharp turn into the world of web development. It's been quite the journey! With a background in healthcare and a newfound love for coding, I'm all about blending my eye for detail with a splash of creativity. Excited to dive into this new chapter and see where it takes me!
+          I used to spend my days fixing smiles as a dentist, but recently, I've taken a sharp turn into the world of web development. It's been quite the journey! 
+          Along the way, I completed my <span class="diploma"> Diploma in Information Technology (Front-End and Back-End Web Developemt</span>). With a background in healthcare and a newfound love for coding, 
+          I'm all about blending the digital world with my keen eye for detail, a dash of creativity, and a genuine love for problem-solving! 
+          Excited to dive into this new chapter and see where it takes me!
       </p>
+      
       <div class="tech-section">
         <h3>
           TECH STACK
@@ -46,14 +64,21 @@
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
+          <li>TypeScript</li>
           <li>React</li>
+          <li>Angular</li>
+          <li>SQL</li>
+          <li>MongoDB</li>
+          <li>Rest APIs</li>
           <li>NodeJS</li>
           <li>C# .NET</li>
 
         </ul>
+        
 
       </div>
     </div>
+   
 
    
       
@@ -71,13 +96,11 @@
         <div class="info">
           Phone: <br/> 0405 861 234
         </div>
-        <div class="info">
-          Location: <br /> Brisbane, Australia
-        </div>
+        
       </div>
     </div>
   </div>
   </div>
-     
+     <script src="./scripts/app.js"></script>
   </body>
 </html>

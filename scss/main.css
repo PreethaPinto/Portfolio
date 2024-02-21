@@ -20,6 +20,7 @@ html, body {
   font-weight: 700;
   font-size: 30px;
   box-shadow: 5px 10px 10px #461121;
+  text-decoration: none;
 }
 .header .navigation {
   display: flex;
@@ -35,11 +36,8 @@ html, body {
   letter-spacing: 0.5px;
   box-shadow: 5px 10px 10px #461121;
 }
-.header .navigation a:hover {
-  color: #ff3c78;
-}
-
-.active {
+.header .navigation a:hover,
+.header .navigation a.active {
   color: #ff3c78;
 }
 

@@ -56,7 +56,7 @@ html, body {
 
 
 #home {
-  background-image: url(./assets/background.jpg);
+  background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -128,6 +128,8 @@ html, body {
 }
 }
 
+
+//ABOUT SECTION
 .about-section {
   color: $text-color;
   font-size: 18px;
@@ -142,8 +144,16 @@ html, body {
     font-weight: 700;
   }
 
+  .about-me {
+    display: flex;
+    justify-content: center;
+  }
+
   h2 {
     text-align: center;
+    box-shadow: 3px 3px 3px #686868;  
+    width: 20%;
+   
   }
 
   p {
@@ -168,18 +178,24 @@ html, body {
   
   li {
     list-style: none;
-    padding: 20px;
+    padding: 10px 15px;
     border: 2px solid $accent-color;
-    margin: 20px;
+    margin: 10px;
     font-weight: 700;
-    box-shadow: 5px 10px 10px #461121;
+    box-shadow: 2px 2px 2px #686868;
+    border-radius: 5px;
   }
 }
 
+
+//PORTFOLIO SECTION
+
+//CONTACT SECTION
 .contact {
   background-color: #1d1c1c;
   color: #fff;
   text-align: center;
+ 
 
 .contact-section {
   font-size: 18px;
@@ -188,10 +204,19 @@ html, body {
   padding-top: 200px;
   padding-bottom: 200px;
   letter-spacing: 1px; 
+ 
 }
 
 h2 {
   text-align: center;
+  box-shadow: 3px 3px 3px #686868;  
+  width: 15%;
+
+}
+
+.contact-text {
+  display: flex;
+  justify-content: center;
 }
 
 .contact-info  {
@@ -209,6 +234,8 @@ h2 {
     letter-spacing: 1px;
     font-size: 20px;
     line-height: 1.8;
+    border-radius: 5px;
+
    }
 }  
 

@@ -44,7 +44,7 @@ html, body {
 }
 
 #home {
-  background-image: url(./assets/background.jpg);
+  background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -119,8 +119,14 @@ html, body {
 .about-section .diploma {
   font-weight: 700;
 }
+.about-section .about-me {
+  display: flex;
+  justify-content: center;
+}
 .about-section h2 {
   text-align: center;
+  box-shadow: 3px 3px 3px #686868;
+  width: 20%;
 }
 .about-section p {
   font-size: larger;
@@ -141,11 +147,12 @@ html, body {
 }
 .tech-stack li {
   list-style: none;
-  padding: 20px;
+  padding: 10px 15px;
   border: 2px solid #ff3c78;
-  margin: 20px;
+  margin: 10px;
   font-weight: 700;
-  box-shadow: 5px 10px 10px #461121;
+  box-shadow: 2px 2px 2px #686868;
+  border-radius: 5px;
 }
 
 .contact {
@@ -163,6 +170,12 @@ html, body {
 }
 .contact h2 {
   text-align: center;
+  box-shadow: 3px 3px 3px #686868;
+  width: 15%;
+}
+.contact .contact-text {
+  display: flex;
+  justify-content: center;
 }
 .contact .contact-info {
   display: flex;
@@ -179,4 +192,5 @@ html, body {
   letter-spacing: 1px;
   font-size: 20px;
   line-height: 1.8;
+  border-radius: 5px;
 }/*# sourceMappingURL=main.css.map */

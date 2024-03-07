@@ -1,245 +1,74 @@
-$text-color: #000;
-$accent-color: #ff3c78;
-$secondary-color:#003366;
-$tertiary-color: #461121;
+$text-color: #fff;
+$accent-color: #0b2447;
+$secondary-color:  #19376d;
+$bg-color: #04152d;
+$tertiary-color: #576cbc;
+$hover: #00b7ff;
 
-html, body {
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  font-family: "Raleway", sans-serif;
   box-sizing: border-box;
-}  
+  font-family: "Nunito", sans-serif;
+}
 
-.header {
-  position: fixed;
-  width: 100%;
-  background-color: $text-color;
+
+body {
+  background-color: $bg-color;
+}
+
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-
-  .logo {
-    color: $accent-color;
-    margin-left: 100px;
-    font-weight: 700;
-    font-size: 30px;
-     box-shadow: 5px 10px 10px $tertiary-color;
-     text-decoration: none;
-  }
-
-  .navigation {
-    display: flex;
-   justify-content: flex-end;
-   padding-top: 30px;
-   padding-bottom: 30px;
-   margin-right: 100px;
-
-  a {
-    text-decoration: none;
-    color: #fff;    
-   margin-left: 100px;
-   letter-spacing: 0.5px;
-     box-shadow: 5px 10px 10px $tertiary-color;
-
-  } 
-
- a:hover,
- a.active {
-   color: $accent-color;
- }
-
- }
-}
-
-#home {
-  background-image: url(../assets/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  
-}
-
-.home-section {
-  display: flex;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  height: 100vh; 
-
-
-.intro-text {
-  color: #fff;
-  font-size: 30px;
-}
-
-.name {
-  color: $accent-color;
+  height: 5rem;
   font-weight: 700;
-  font-size: 40px;
-  box-shadow: 5px 10px 10px #461121;
-}
-}
-
-.intro-links {
-  display: flex;
-  
-  align-items: center;
-  font-size: 30px;
-
-  .social-icon {
-  margin-right: 20px;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  background-color: transparent;
-  color: $accent-color;
-  transition: 0.6s, ease;
-  transition-property: background-color, color;
-}
-
-.social-icon:hover {
-  background-color: $accent-color; 
+  font-size: 1.2rem;
   color: $text-color;
+  padding-top:4rem;
+  padding-bottom: 2rem;
 }
 
-.icon {
-   line-height: 1.4;
-}
-
-.resume {
-  font-size: 16px;
-  border: 2px solid $accent-color;
-  display: inline-block;
-  padding: 8px 15px;
-  background-color: transparent; 
-  color:#fff; 
+.logo a, .resume a {
+  color: $text-color;
   text-decoration: none;
-  transition: 0.6s, ease;
-  transition-property: background-color, color;
 }
 
-.resume:hover {
-  background-color: $accent-color; 
-}
-}
-
-
-//ABOUT SECTION
-.about-section {
+nav a {
+  position: relative;
+  font-size: 1.2rem;
   color: $text-color;
-  font-size: 18px;
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: justify;
-  line-height: 1.8;
-
-  .diploma {
-    font-weight: 700;
-  }
-
-  .about-me {
-    display: flex;
-    justify-content: center;
-  }
-
-  h2 {
-    text-align: center;
-    box-shadow: 3px 3px 3px #686868;  
-    width: 20%;
-   
-  }
-
-  p {
-    font-size: larger;
-  }
-
-  .tech-section {
-    margin-top: 80px;
-    
-    h3 {
-      text-align: center;
-    }
-  }
+  text-decoration: none;
+  padding: 6px 40px;
+  transition: .5s;
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
-  li {
-    list-style: none;
-    padding: 10px 15px;
-    border: 2px solid $accent-color;
-    margin: 10px;
-    font-weight: 700;
-    box-shadow: 2px 2px 2px #686868;
-    border-radius: 5px;
-  }
+nav a:hover {
+  color: $hover
 }
 
-
-//PORTFOLIO SECTION
-
-//CONTACT SECTION
-.contact {
-  background-color: #1d1c1c;
-  color: #fff;
-  text-align: center;
- 
-
-.contact-section {
-  font-size: 18px;
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  letter-spacing: 1px; 
- 
+nav a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-bottom: 2px solid $hover;
+  border-radius: 15px;
+  transform: scale(0) translateY(50px);
+  opacity: 0;
+  transition: .5s;
 }
 
-h2 {
-  text-align: center;
-  box-shadow: 3px 3px 3px #686868;  
-  width: 15%;
-
+nav a:hover span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
-.contact-text {
-  display: flex;
-  justify-content: center;
+nav a.active span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
-.contact-info  {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-
-   .info {
-    border: 2px solid $accent-color;
-    box-shadow: 5px 10px 10px #461121;
-    margin: 20px;
-    padding: 40px;
-    width: 300px;
-    letter-spacing: 1px;
-    font-size: 20px;
-    line-height: 1.8;
-    border-radius: 5px;
-
-   }
-}  
-
-}
-
-
-@media screen {
-  
-}
 

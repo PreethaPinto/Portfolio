@@ -40,9 +40,15 @@ btn.onclick = function() {
     
     if (currentLogo === darkLogo) {
         logo.setAttribute('src', lightLogo);
+
+        btn.innerHTML = '<i class="fa-solid fa-moon" style="cursor: pointer; font-size: 24px;"></i>';
+        
     } else {
-        logo.setAttribute('src', darkLogo)
+        logo.setAttribute('src', darkLogo);
+
+        btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
+    
 }
 
 

@@ -21,44 +21,72 @@
         <header>
           <div class="logo">
             <a href="#" class="nav-link">
-              <img src="/assets/logo.png" data-dark="/assets/logo.png" data-light="/assets/profile-image.jpg" />
+              <img src="/assets/logo-dark.png" data-dark="/assets/logo-dark.png" data-light="/assets/logo-light.png" />
             </a>
           </div> 
           <div>
-            <nav>
-              <a href="#" class="nav-link">HOME<span></span></a>
-              <a href="#about" class="nav-link">ABOUT<span></span></a>
-              <a href="#portfolio" class="nav-link">PORTFOLIO<span></span></a>
-              <a href="#contact" class="nav-link">CONTACT<span></span></a>
-             
-            </nav>
+
+            <ul class="navbar">
+              <li><a href="#">
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="title">HOME</span>
+              </a>
+              </li>
+              <li>
+                <a href="#about">
+                <span class="icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="title">ABOUT</span>
+              </a>
+              </li>
+              <li>
+                <a href="#portfolio">
+                <span class="icon">
+                  <ion-icon name="briefcase-outline"></ion-icon>
+                </span>
+                <span class="title">
+                  PORTFOLIO
+                </span>
+              </a>
+              </li>
+              <li>
+                <a href="#contact">
+                <span class="icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </span>
+                <span class="title">
+                  CONTACT
+                </span>
+              </a>
+              </li>
+            </ul>
           </div>
           <div class="toggle" id="btn">
             <i class="fa-solid fa-sun"></i>
           </div>
           </header>
             
-          <!-- <div class="profile"> -->
-          <!-- <img src="/assets/profile-image.jpg" alt="profile-image" class="profile-image"> -->
 
           <div class="intro">
             <h2>Hey there, <br />
             I'm <span class="name" data-text="PREETHA">PREETHA</span>. <br/>
             I'm a full-stack developer <br/> based in Brisbane, Australia.
-          </h2>
-
-
-          <div class="icons">
+            </h2>
+          <div class="social-icons">
                 <a href="https://www.linkedin.com/in/preetha-pinto/" target="_blank" class="social-link">
                 <i class="fa-brands fa-linkedin-in"></i></a>
             
                 <a href="https://github.com/PreethaPinto" target="_blank" class="social-link">
                 <i class="fa-brands fa-github"></i>
                 </a>
-        </div>
-              <a href="./documents/Preetha-Pinto-Resume.pdf" class="resume">
-                <button>DOWNLOAD CV</button>
+        
+              <a href="./documents/Preetha-Pinto-Resume.pdf" target="_blank">
+                <button>RESUME</button>
              </a>
+             </div>
           </div>
 
 
@@ -88,5 +116,8 @@
         </div>
       </div>
      <script type="text/javascript" src="./scripts/app.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   </body>
 </html> 

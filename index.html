@@ -10,15 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./scss/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
   </head>
 
   <body id="main">
+    <div id="home">
    
-        <header >
+        <header>
           <div class="logo">
-            <a href="#">PORTFOLIO</a>
+            <a href="#" class="nav-link">
+              <img src="/assets/logo.png" data-dark="/assets/logo.png" data-light="/assets/profile-image.jpg" />
+            </a>
           </div> 
           <div>
             <nav>
@@ -26,21 +30,63 @@
               <a href="#about" class="nav-link">ABOUT<span></span></a>
               <a href="#portfolio" class="nav-link">PORTFOLIO<span></span></a>
               <a href="#contact" class="nav-link">CONTACT<span></span></a>
+             
             </nav>
           </div>
-          
-          <div class="resume">            
-              <a href="./documents/Preetha-Pinto-Resume.pdf">
-                DOWNLOAD CV
-             </a>
+          <div class="toggle" id="btn">
+            <i class="fa-solid fa-sun"></i>
           </div>
           </header>
+            
+          <!-- <div class="profile"> -->
+          <!-- <img src="/assets/profile-image.jpg" alt="profile-image" class="profile-image"> -->
 
-          
+          <div class="intro">
+            <h2>Hey there, <br />
+            I'm <span class="name" data-text="PREETHA">PREETHA</span>. <br/>
+            I'm a full-stack developer <br/> based in Brisbane, Australia.
+          </h2>
 
-          
-    
- 
+
+          <div class="icons">
+                <a href="https://www.linkedin.com/in/preetha-pinto/" target="_blank" class="social-link">
+                <i class="fa-brands fa-linkedin-in"></i></a>
+            
+                <a href="https://github.com/PreethaPinto" target="_blank" class="social-link">
+                <i class="fa-brands fa-github"></i>
+                </a>
+        </div>
+              <a href="./documents/Preetha-Pinto-Resume.pdf" class="resume">
+                <button>DOWNLOAD CV</button>
+             </a>
+          </div>
+
+
+
+        <!-- </div> -->
+      </div>
+
+      <div class="about-section" id="about">
+        <h2>
+          ABOUT ME
+        </h2>
+          <p>
+          I used to spend my days fixing smiles as a dentist, but recently, I've taken a sharp turn into the world of web development. It's been quite the journey! With a background in healthcare and a newfound love for coding, I'm all about blending my eye for detail with a splash of creativity. Excited to dive into this new chapter and see where it takes me!
+        </p>
+        <div class="tech-section">
+          <h3>
+            TECH STACK
+          </h3>
+          <ul class="tech-stack">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li></i>React</li>
+            <li></i>NodeJS</li>
+            <li>C# .NET</li>
+          </ul>  
+        </div>
+      </div>
      <script type="text/javascript" src="./scripts/app.js"></script>
   </body>
 </html> 

@@ -1,3 +1,4 @@
+//Add active tab on select
 const navLinkList = document.querySelectorAll('.nav-link');
 
 navLinkList.forEach(link => {
@@ -17,6 +18,8 @@ navLinkList.forEach(link => {
     });
 });
 
+
+//Add sticky navbar
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
 
@@ -27,6 +30,8 @@ document.addEventListener('scroll', () => {
     }
 })
 
+
+//Add light mode
 let btn = document.getElementById('btn'); 
 let logo = document.querySelector('.logo img')
 
@@ -47,8 +52,13 @@ btn.onclick = function() {
         logo.setAttribute('src', darkLogo);
 
         btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    }
-    
+    }   
 }
+
+//Clear form after going back to page
+window.onload = function() {
+    // Reset the form fields when the page loads
+    document.getElementById("form").reset();
+};
 
 

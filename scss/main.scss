@@ -150,7 +150,6 @@ header.sticky {
     }
   }
 
-
   .social-icons {
     a {
     text-decoration: none;
@@ -240,6 +239,9 @@ header.sticky {
 
 
 //ABOUT SECTION
+#about {
+  height: 100vh;
+}
 .about-section {
   h2, p, .tech-section {
     color: $text-color;
@@ -274,6 +276,79 @@ header.sticky {
       font-size: 20px;
     }
   }
+
+
+  //PORTFOLIO
+  #portfolio {
+    height: 100vh;
+  }
+
+  //CONTACT SECTION
+  .contact-section {
+    color: $text-color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    hr {
+      border: none;
+      width: 200px;
+      height: 5px;
+      background-color: $accent-color;
+      border-radius: 10px;
+    }
+
+    .contact-inputs {
+      width: 400px;
+      height: 50px;
+      outline: none;
+      padding-left: 25px;
+      font-weight: 500;
+      color: #666;
+    }
+
+    .text-area {
+      height: 140px;
+      padding: 15px;
+    }
+
+    .contact-inputs:focus {
+      border: 3px solid $accent-color;
+    }
+
+    .contact-inputs::placeholder {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    button {
+      align-self: center;
+      width: 150px;
+      padding: 15px ;
+      font-size: 16px;
+      gap: 10px;
+      cursor: pointer;
+      background-color: $accent-color;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+}
 
   body.light{
     background: #fff; 

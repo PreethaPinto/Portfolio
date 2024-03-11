@@ -1,9 +1,28 @@
 $bg-color: #000;
-$secondary-color: rgb(35, 23, 4);
-$accent-color: rgb(230, 192, 104);
-$hover: rgb(230, 192, 104);
+$secondary-color: #231704;
+$accent-color: #cf1b1b;
 $text-color: #fff;
 $text-color-dark: #000;
+$opacity: 0.4;
+$color-with-opacity: rgba($accent-color, $opacity);
+
+@mixin heading {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: $text-color;
+}
+
+@mixin horizontal-line {
+  border: none;
+  height: 5px;
+  background-color: $accent-color;
+  border-radius: 10px;
+}
+
+
+
 
 * {
   padding: 0;
@@ -16,8 +35,12 @@ html,body {
 }
 
 body {
-  background: linear-gradient(to bottom, #000, $bg-color);
+  background: $bg-color;
   margin: 0;  
+}
+
+.spacer {
+  height: 20vh;
 }
 
 //HOME SECTION
@@ -42,11 +65,14 @@ header {
 
 header.scrolled {
   background-color: $bg-color;
-  box-shadow: 1px 1px 25px #414040;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 img {
-  width: 150px;
+  width: 80px;
 }
 
 .light-mode {
@@ -59,7 +85,9 @@ header.sticky {
 
 .toggle {
   width: 150px;
+  //height: 80px;
   text-align: center;
+  font-size: 1.8rem;
 }
 
 .fa-sun {
@@ -89,29 +117,29 @@ header.sticky {
   li {
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: $bg-color;
-    border-radius: 60px;
+    border-radius: 15px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 20px rgb(230, 192, 104, 0.4);
+    box-shadow: 0px 0px 12px $accent-color;
     transition: 0.5;
   }
 
 
   li:hover {
       width: 150px;
-      box-shadow: 0 1px 20px $accent-color;
+      box-shadow: 0px 0px 12px $accent-color;
     }
   
     li::before {
       content: '';
       position: absolute;
       inset: 0;
-      border-radius: 60px;
+      border-radius: 20px;
       background: linear-gradient(45deg, $bg-color, $secondary-color);
       opacity: 0;
       transition: 0.5s;
@@ -193,7 +221,7 @@ header.sticky {
 
 .name { 
   position: relative;
-  font-size: 3vw;
+  font-size: 4vw;
   color: $bg-color;
   -webkit-text-stroke: 0.1vw #1c293a;
   z-index: -2;
@@ -206,9 +234,9 @@ header.sticky {
   left: 0;
   width: 0;
   height: 100%;
-  color: $hover;
+  color: $accent-color;
   -webkit-text-stroke: 0vw #1c293a;
-  border-right: 2px solid $hover;
+  border-right: 2px solid $accent-color;
   overflow: hidden;
   animation: animate 6s linear infinite;
 
@@ -239,43 +267,89 @@ header.sticky {
 
 
 //ABOUT SECTION
-#about {
-  height: 100vh;
-}
+
 .about-section {
-  h2, p, .tech-section {
+  margin: 6% auto;
+  
+  h2 {
+    @include heading;
+  }
+
+  hr {
+    @include horizontal-line;
+    width: 150px;
+  }
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    gap: 50px;
+    margin-top: 100px;
+  }
+
+  img {
+    height: 400px;
+    width: 400px;
+    border-radius: 100px;
+    //border: 1px solid $accent-color;
+    box-shadow: 0px 0px 12px #fff;
+  }
+  
+
+  p {
     color: $text-color;
-  }
-}
-
-.about-section {
-  width: 60vw;
-  margin: auto;
-  background: linear-gradient(to bottom, #000, $accent-color);
-  padding: 20px;
-  border-radius: 20px;
-
-  li {
-    list-style: none;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.5px;
+    }
   }
 
-  h2, h3 {
-    text-align: center;
-  }
+  .skills-section {
+    color: $text-color;
+    margin-top: 100px;
 
-  .tech-stack {
-    display: flex; 
-  }
-    
-    .tech-stack li {
+    h3 {
+      @include heading;
+    }
+
+    hr {
+      @include horizontal-line;
+      width: 100px;
+    }
+
+    ul {
       display: flex;
-      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      font-size: 24px;
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 50px;
+
+
+    }
+
+    li {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 20px;
     }
-  }
+
+    .fa-brands {
+      font-size: 4rem;
+    }
+  
+  } 
+
+
+  
+
+
 
 
   //PORTFOLIO
@@ -283,9 +357,19 @@ header.sticky {
     height: 100vh;
   }
 
+  .portfolio-section {
+    h2 {
+      @include heading;
+    }
+
+    hr {
+       @include horizontal-line;
+       width: 100px;
+    }
+  }
+
   //CONTACT SECTION
   .contact-section {
-    color: $text-color;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -300,18 +384,12 @@ header.sticky {
     }
 
     h2 {
-      font-weight: 600;
-      font-size: 40px;
-      margin-bottom: 5px;
-      text-align: center;
+      @include heading;
     }
 
     hr {
-      border: none;
+      @include horizontal-line;
       width: 200px;
-      height: 5px;
-      background-color: $accent-color;
-      border-radius: 10px;
     }
 
     .contact-inputs {
@@ -353,7 +431,7 @@ header.sticky {
   body.light{
     background: #fff; 
 
-    h2 {
+    h2, p, ul, li, h3 {
     color: $text-color-dark;
     }
 

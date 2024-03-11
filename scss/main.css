@@ -9,8 +9,12 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom, #000, #000);
+  background: #000;
   margin: 0;
+}
+
+.spacer {
+  height: 20vh;
 }
 
 #home {
@@ -31,11 +35,14 @@ header {
 
 header.scrolled {
   background-color: #000;
-  box-shadow: 1px 1px 25px #414040;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 img {
-  width: 150px;
+  width: 80px;
 }
 
 .light-mode {
@@ -49,6 +56,7 @@ header.sticky {
 .toggle {
   width: 150px;
   text-align: center;
+  font-size: 1.8rem;
 }
 
 .fa-sun {
@@ -76,27 +84,27 @@ header.sticky {
 .navbar li {
   position: relative;
   list-style: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: #000;
-  border-radius: 60px;
+  border-radius: 15px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 5px 20px rgba(230, 192, 104, 0.4);
+  box-shadow: 0px 0px 12px #cf1b1b;
   transition: 0.5;
 }
 .navbar li:hover {
   width: 150px;
-  box-shadow: 0 1px 20px rgb(230, 192, 104);
+  box-shadow: 0px 0px 12px #cf1b1b;
 }
 .navbar li::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 60px;
-  background: linear-gradient(45deg, #000, rgb(35, 23, 4));
+  border-radius: 20px;
+  background: linear-gradient(45deg, #000, #231704);
   opacity: 0;
   transition: 0.5s;
 }
@@ -132,7 +140,7 @@ header.sticky {
   margin-right: 20px;
 }
 .social-icons button {
-  background: rgb(230, 192, 104);
+  background: #cf1b1b;
   height: 35px;
   width: 100px;
   border-radius: 6px;
@@ -140,7 +148,7 @@ header.sticky {
   cursor: pointer;
 }
 .social-icons a:hover {
-  color: rgb(230, 192, 104);
+  color: #cf1b1b;
   transition: 0.5s;
   font-size: 1.8rem;
 }
@@ -163,7 +171,7 @@ header.sticky {
 
 .name {
   position: relative;
-  font-size: 3vw;
+  font-size: 4vw;
   color: #000;
   -webkit-text-stroke: 0.1vw #1c293a;
   z-index: -2;
@@ -176,9 +184,9 @@ header.sticky {
   left: 0;
   width: 0;
   height: 100%;
-  color: rgb(230, 192, 104);
+  color: #cf1b1b;
   -webkit-text-stroke: 0vw #1c293a;
-  border-right: 2px solid rgb(230, 192, 104);
+  border-right: 2px solid #cf1b1b;
   overflow: hidden;
   animation: animate 6s linear infinite;
 }
@@ -201,45 +209,103 @@ header.sticky {
   text-decoration: none;
 }
 
-#about {
-  height: 100vh;
+.about-section {
+  margin: 6% auto;
 }
-
-.about-section h2, .about-section p, .about-section .tech-section {
+.about-section h2 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
+  text-align: center;
   color: #fff;
 }
-
-.about-section {
-  width: 60vw;
+.about-section hr {
+  border: none;
+  height: 5px;
+  background-color: #cf1b1b;
+  border-radius: 10px;
+  width: 150px;
+}
+.about-section .profile {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
   margin: auto;
-  background: linear-gradient(to bottom, #000, rgb(230, 192, 104));
-  padding: 20px;
-  border-radius: 20px;
+  gap: 50px;
+  margin-top: 100px;
 }
-.about-section li {
-  list-style: none;
+.about-section img {
+  height: 400px;
+  width: 400px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 12px #fff;
 }
-.about-section h2, .about-section h3 {
+.about-section p {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.5px;
+}
+
+.skills-section {
+  color: #fff;
+  margin-top: 100px;
+}
+.skills-section h3 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
   text-align: center;
+  color: #fff;
 }
-.about-section .tech-stack {
-  display: flex;
+.skills-section hr {
+  border: none;
+  height: 5px;
+  background-color: #cf1b1b;
+  border-radius: 10px;
+  width: 100px;
 }
-.about-section .tech-stack li {
+.skills-section ul {
   display: flex;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-size: 24px;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 50px;
+}
+.skills-section li {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+}
+.skills-section .fa-brands {
+  font-size: 4rem;
 }
 
 #portfolio {
   height: 100vh;
 }
 
-.contact-section {
+.portfolio-section h2 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
+  text-align: center;
   color: #fff;
+}
+.portfolio-section hr {
+  border: none;
+  height: 5px;
+  background-color: #cf1b1b;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.contact-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -257,13 +323,14 @@ header.sticky {
   font-size: 40px;
   margin-bottom: 5px;
   text-align: center;
+  color: #fff;
 }
 .contact-section hr {
   border: none;
-  width: 200px;
   height: 5px;
-  background-color: rgb(230, 192, 104);
+  background-color: #cf1b1b;
   border-radius: 10px;
+  width: 200px;
 }
 .contact-section .contact-inputs {
   width: 400px;
@@ -278,7 +345,7 @@ header.sticky {
   padding: 15px;
 }
 .contact-section .contact-inputs:focus {
-  border: 3px solid rgb(230, 192, 104);
+  border: 3px solid #cf1b1b;
 }
 .contact-section .contact-inputs::-moz-placeholder {
   font-size: 16px;
@@ -295,7 +362,7 @@ header.sticky {
   font-size: 16px;
   gap: 10px;
   cursor: pointer;
-  background-color: rgb(230, 192, 104);
+  background-color: #cf1b1b;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -303,7 +370,7 @@ header.sticky {
 body.light {
   background: #fff;
 }
-body.light h2 {
+body.light h2, body.light p, body.light ul, body.light li, body.light h3 {
   color: #000;
 }
 body.light li {

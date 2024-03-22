@@ -1,5 +1,5 @@
 //Add active tab on select
-const navLinkList = document.querySelectorAll('.nav-link');
+const navLinkList = document.querySelectorAll('.icon');
 
 navLinkList.forEach(link => {
     link.addEventListener('click', (event) => {
@@ -18,17 +18,34 @@ navLinkList.forEach(link => {
     });
 });
 
+let nav = document.querySelector('header');
+let prevScrollPosition = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+    let currentScrollPosition = window.pageYOffset;
+
+    if (prevScrollPosition < currentScrollPosition) {
+        // Scrolling down, hide the navbar
+        nav.classList.add('hide');
+    } else {
+        // Scrolling up, show the navbar
+        nav.classList.remove('hide');
+    }
+
+    prevScrollPosition = currentScrollPosition;
+});
+
 
 //Add sticky navbar
-document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+// document.addEventListener('scroll', () => {
+//     const header = document.querySelector('header');
 
-    if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-})
+//     if (window.scrollY > 0) {
+//         header.classList.add('scrolled');
+//     } else {
+//         header.classList.remove('scrolled');
+//     }
+// })
 
 
 //Add light mode
@@ -61,4 +78,31 @@ window.onload = function() {
     document.getElementById("form").reset();
 };
 
+
+
+function toggleMenu() {
+    const responsiveMenu = document.querySelector('.hamburger-nav');
+    const iconBars = document.querySelector('.open-icon');
+    const iconX = document.querySelector('.close-icon');
+
+    if (responsiveMenu.style.display === 'block') {
+        responsiveMenu.style.display = 'none';
+        iconBars.style.display = 'block';
+        iconX.style.display = 'none';
+    } else {
+        responsiveMenu.style.display = 'block';
+        iconBars.style.display = 'none';
+        iconX.style.display = 'block';
+    }
+}
+
+
+function hideMenu() {
+const closeResponsiveMenu = document.querySelector('.hamburger-nav');
+closeResponsiveMenu.style.display = 'none';
+const iconBars = document.querySelector('.open-icon');
+    const iconX = document.querySelector('.close-icon');
+    iconBars.style.display = 'block'; 
+    iconX.style.display = 'none';
+}
 

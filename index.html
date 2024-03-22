@@ -21,12 +21,11 @@
     <div id="home">
         <header>
           <div class="logo">
-            <a href="#" class="nav-link">
+            <a href="#" class="icon">
               <img src="/assets/logo-dark.png" data-dark="/assets/logo-dark.png" data-light="/assets/logo-light.png" />
             </a>
-          </div> 
-          <div>
-
+          </div>
+          <div class="nav">
             <ul class="navbar">
               <li><a href="#">
                 <span class="icon">
@@ -64,11 +63,28 @@
               </a>
               </li>
             </ul>
+            <div>
+            <div class="toggle" id="btn">
+              <i class="fa-solid fa-sun toggle"></i>
+              
+            </div>
           </div>
-          <div class="toggle" id="btn">
-            <i class="fa-solid fa-sun"></i>
+         <div class="menu"> 
+          <i class="fa-solid fa-x close-icon" onclick=toggleMenu()></i>
+          <i  class="fa-solid fa-bars open-icon" onclick=toggleMenu()></i>
           </div>
-          </header>
+        </div>
+        </header>
+        
+        <div class="hamburger-nav">
+          <nav>
+            <a href="#home" onClick=hideMenu()>HOME</a>
+            <a href="#about" onClick=hideMenu()>ABOUT</a>
+            <a href="#portfolio" onClick=hideMenu()>PORTFOILO</a>
+            <a href="#contact" onClick=hideMenu()>CONTACT</a>
+          </nav>
+        </div>
+      </div>
             
 
           <div class="intro">
@@ -89,7 +105,8 @@
              </a>
              </div>
           </div>
-      </div>
+
+      
 
       <div class="spacer"></div>
 
@@ -140,6 +157,16 @@
       <div id="portfolio" class="portfolio-section">
       <h2>PROJECTS</h2>
       <hr>
+      <div class="project-section">
+        <div class="projects">
+      <div class="project"></div>
+      <div class="project"></div>
+    </div>
+    <div class="projects">
+      <div class="project"></div>
+      <div class="project"></div>
+    </div>
+    </div>
     </div>
 
     <div class="spacer"></div>

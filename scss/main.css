@@ -9,32 +9,31 @@ html, body {
 }
 
 body {
-  background: #000;
   margin: 0;
+  background: #000;
 }
 
 .spacer {
   height: 20vh;
 }
 
-#home {
-  height: 100vh;
+.hamburger-nav, .menu {
+  display: none;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-weight: 700;
   color: #fff;
-  transition: #000 0.4s ease-in-out;
-}
-
-header.scrolled {
+  transition: 0.5s;
   background-color: #000;
+  padding: 10px 0;
 }
 
 header.hide {
@@ -43,6 +42,7 @@ header.hide {
 
 img {
   width: 80px;
+  margin-left: 30px;
 }
 
 .light-mode {
@@ -54,17 +54,27 @@ header.sticky {
 }
 
 .toggle {
-  width: 150px;
+  width: 80px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  margin-right: 30px;
 }
 
 .fa-sun {
   cursor: pointer;
 }
 
+.fa-sun:hover {
+  color: #cf1b1b;
+}
+
 .home-icon {
   color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar {
@@ -72,7 +82,8 @@ header.sticky {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 75px;
+  gap: 100px;
+  width: 500px;
 }
 .navbar li a {
   text-decoration: none;
@@ -84,20 +95,13 @@ header.sticky {
 .navbar li {
   position: relative;
   list-style: none;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  border-radius: 15px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 12px #cf1b1b;
-  transition: 0.5;
 }
 .navbar li:hover {
-  width: 150px;
-  box-shadow: 0px 0px 12px #cf1b1b;
+  width: 100px;
 }
 .navbar li::before {
   content: "";
@@ -132,6 +136,7 @@ header.sticky {
 .navbar li:hover .title {
   transform: scale(1);
   transition-delay: 0.5s;
+  color: #cf1b1b;
 }
 
 .social-icons a {
@@ -157,6 +162,10 @@ header.sticky {
   height: 40px;
   transition: 0.5s;
   font-size: 20px;
+}
+
+.icon.active {
+  color: #cf1b1b;
 }
 
 .intro {
@@ -286,10 +295,6 @@ header.sticky {
   font-size: 4rem;
 }
 
-#portfolio {
-  height: 100vh;
-}
-
 .portfolio-section h2 {
   font-weight: 600;
   font-size: 40px;
@@ -303,6 +308,20 @@ header.sticky {
   background-color: #cf1b1b;
   border-radius: 10px;
   width: 100px;
+}
+
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  width: 600px;
+  height: 400px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  margin: 40px;
 }
 
 .contact-section {
@@ -388,4 +407,129 @@ body.light header {
 }
 body.light .social-icons .fa-brands {
   color: #000;
+}
+body.light .navbar li {
+  box-shadow: 0px 0px 12px #000;
+}
+body.light .project {
+  border: 1px solid #000;
+}
+
+.openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.closeMenu,
+.icons i {
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-icons {
+  position: absolute;
+  right: 5%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: rem 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header img {
+    width: 80px;
+    margin-left: 0;
+  }
+  .nav-icons {
+    display: block;
+  }
+  .nav-icons:hover {
+    color: #cf1b1b;
+  }
+  .nav-icons .close-icon {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .hamburger-nav {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    margin-top: 4rem;
+    background-color: #000;
+  }
+  .hamburger-nav nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburger-nav nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 40px 20px;
+  }
+  .hamburger-nav nav a:hover {
+    color: #cf1b1b;
+  }
+  .toggle {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile p {
+    text-align: justify;
+    padding: 3rem;
+  }
+  .profile img {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills-section {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-section {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -233,39 +233,40 @@ li span {
    color: $text-color;
    font-size: 1.5rem;
    margin: 0 25vw;
+
+   .name {
+    font-size: 4rem;
+    color: $accent-color;
+   }
+   
  }
 
- .name { 
-   position: relative;
-   font-size: 4vw;
-   color: $bg-color;
-   -webkit-text-stroke: 0.1vw #1c293a;
-   z-index: -2;
 
-}
- .name::before {
-   content: attr(data-text);
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 0;
-   height: 100%;
-   color: $accent-color;
-   -webkit-text-stroke: 0vw #1c293a;
-   border-right: 2px solid $accent-color;
-   overflow: hidden;
-   animation: animate 6s linear infinite;
+
+
+//  .name::before {
+//    content: attr(data-text);
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 0;
+//    height: 100%;
+//    color: $accent-color;
+//    -webkit-text-stroke: 0vw #1c293a;
+//    border-right: 2px solid $accent-color;
+//    overflow: hidden;
+//    animation: animate 6s linear infinite;
 
   
-   @keyframes animate {
-     0%, 10%, 100% {
-       width: 0;
-     }
-     70%, 90% {
-       width: 100%;
-     }
-   }
- }
+//    @keyframes animate {
+//      0%, 10%, 100% {
+//        width: 0;
+//      }
+//      70%, 90% {
+//        width: 100%;
+//      }
+//    }
+//  }
 
  .icons a { 
 //   //width: 40px;
@@ -547,15 +548,9 @@ li span {
         width: 80px;
        }
      }
-     .nav-icons {
-       display: block;
-     }
+     
 
-     .nav-icons:hover {
-       color: $accent-color;
-    }
-
-     .nav-icons .close-icon {
+    .close-icon {
        display: none;
      }
 
@@ -586,7 +581,7 @@ li span {
          flex-direction: column;
          justify-content: center;
          align-items: center;
-     
+    
          a {
            text-decoration: none;
            color: $text-color;
@@ -605,9 +600,23 @@ li span {
        margin-right: 0;
      }
 
+     .intro {
+      font-size: 1rem;
+
+      .name {
+        font-size: 2.5rem;
+      }
+     }
+
+   
      #about {
       display: flex;
       flex-direction: column;
+      h2,h3  {
+        font-size: 32px;
+       }
+       
+  
     }
 
 
@@ -648,9 +657,14 @@ li span {
       }
     }
 
+    #portfolio h2, #contact h2 {
+      font-size: 32px;
+    }
+
     .project-section {
       display: flex;
       flex-direction: column;
+
     }
 
     .contact-section .contact-inputs {

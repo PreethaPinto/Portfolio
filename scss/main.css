@@ -173,35 +173,9 @@ header.sticky {
   font-size: 1.5rem;
   margin: 0 25vw;
 }
-
-.name {
-  position: relative;
-  font-size: 4vw;
-  color: #000;
-  -webkit-text-stroke: 0.1vw #1c293a;
-  z-index: -2;
-}
-
-.name::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
+.intro .name {
+  font-size: 4rem;
   color: #cf1b1b;
-  -webkit-text-stroke: 0vw #1c293a;
-  border-right: 2px solid #cf1b1b;
-  overflow: hidden;
-  animation: animate 6s linear infinite;
-}
-@keyframes animate {
-  0%, 10%, 100% {
-    width: 0;
-  }
-  70%, 90% {
-    width: 100%;
-  }
 }
 
 .icons a {
@@ -445,13 +419,7 @@ body.light .project {
   header .open-icon {
     width: 80px;
   }
-  .nav-icons {
-    display: block;
-  }
-  .nav-icons:hover {
-    color: #cf1b1b;
-  }
-  .nav-icons .close-icon {
+  .close-icon {
     display: none;
   }
   .navbar {
@@ -490,9 +458,18 @@ body.light .project {
   .toggle {
     margin-right: 0;
   }
+  .intro {
+    font-size: 1rem;
+  }
+  .intro .name {
+    font-size: 2.5rem;
+  }
   #about {
     display: flex;
     flex-direction: column;
+  }
+  #about h2, #about h3 {
+    font-size: 32px;
   }
   .profile {
     display: flex;
@@ -522,6 +499,9 @@ body.light .project {
   }
   .skills-section .tech {
     font-size: 1.2rem;
+  }
+  #portfolio h2, #contact h2 {
+    font-size: 32px;
   }
   .project-section {
     display: flex;

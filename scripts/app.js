@@ -94,6 +94,7 @@ function toggleMenu() {
         iconBars.style.display = 'none';
         iconX.style.display = 'block';
     }
+    
 }
 
 

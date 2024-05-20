@@ -189,6 +189,9 @@ header.sticky {
   text-decoration: none;
 }
 
+.about-section {
+  height: 100vh;
+}
 .about-section h2 {
   font-weight: 600;
   font-size: 40px;
@@ -267,6 +270,9 @@ header.sticky {
   font-size: 4rem;
 }
 
+.portfolio-section {
+  height: 100vh;
+}
 .portfolio-section h2 {
   font-weight: 600;
   font-size: 40px;
@@ -310,7 +316,7 @@ header.sticky {
   top: 0;
   left: 0;
   position: absolute;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;

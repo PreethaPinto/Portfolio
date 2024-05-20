@@ -233,6 +233,7 @@ header.sticky {
 //ABOUT SECTION
 
 .about-section {
+  height: 100vh;
   h2 {
     @include heading;
   }
@@ -308,6 +309,8 @@ header.sticky {
 
 //PORTFOLIO
 .portfolio-section {
+  height: 100vh;
+
   h2 {
     @include heading;
   }
@@ -356,7 +359,7 @@ header.sticky {
   top: 0;
   left: 0;
   position: absolute;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,6 +377,8 @@ header.sticky {
   color: $accent-color;
   margin-bottom: 15px;
 }
+
+
 
 .content p {
   font-size: 19px;

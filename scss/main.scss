@@ -179,6 +179,7 @@ header.sticky {
   }
 
   button {
+    color: #fff;
     background: $accent-color;
     height: 35px;
     width: 100px;
@@ -203,6 +204,18 @@ header.sticky {
 
 .icon.active {
   color: $accent-color;
+}
+
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+//INTRODUCTION
+
+.welcome {
+  min-height: 100%;
 }
 
 .intro {
@@ -232,8 +245,12 @@ header.sticky {
 
 //ABOUT SECTION
 
+.about-me {
+ min-height: 100vh;
+ padding-top: 20px;
+}
+
 .about-section {
-  height: 100vh;
   h2 {
     @include heading;
   }
@@ -308,9 +325,12 @@ header.sticky {
 }
 
 //PORTFOLIO
-.portfolio-section {
-  height: 100vh;
 
+.portfolio {
+  height: 100%;
+}
+
+.portfolio-section {
   h2 {
     @include heading;
   }
@@ -327,28 +347,23 @@ header.sticky {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 50px;
 }
-
-// .project {
-//   border: 1px solid white;
-//   height: 500px;
-//   width: 500px;
-//   margin: 20px;
-//   overflow: hidden;
-// }
 
 .project { 
   width: 700px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
+  border: solid 1px #fff;
+  border-radius: 10px;
 }
 
 .project-image {
  width: 100%;
  display: block;
  margin: auto;
+ border-radius: 10px;
 }
-
 
 
 .content {
@@ -377,8 +392,6 @@ header.sticky {
   color: $accent-color;
   margin-bottom: 15px;
 }
-
-
 
 .content p {
   font-size: 19px;
@@ -453,6 +466,7 @@ header.sticky {
   }
 
   button {
+    color: #fff;
     align-self: center;
     width: 150px;
     padding: 15px;
@@ -495,6 +509,7 @@ body.light {
   .social-icons .fa-brands {
     color: $text-color-dark;
   }
+
 
   .navbar li {
     box-shadow: 0px 0px 12px #000;
@@ -658,7 +673,16 @@ body.light {
   .project-section {
     display: flex;
     flex-direction: column;
+
+    .project {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+    }
   }
+
+ 
 
   .contact-section .contact-inputs {
     width: 350px;

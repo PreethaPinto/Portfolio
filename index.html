@@ -18,6 +18,7 @@
   <body>
     <!-- HOME SECTION -->
     <div id="home"> 
+      
         <header>
           <div class="logo">
             <a href="#" class="icon">
@@ -65,7 +66,6 @@
             <div>
             <div class="toggle" id="btn">
               <i class="fa-solid fa-sun toggle"></i>
-              
             </div>
           </div>
          <div class="menu"> 
@@ -86,6 +86,7 @@
       </div>
             
 
+      <section class="welcome" id="introduction">
           <div class="intro">
             <h2>Hi, 
             I'm <span class="name">PREETHA</span>. <br/>
@@ -100,10 +101,11 @@
                 </a>
         
               <a href="./documents/Preetha-Pinto-Resume.pdf" target="_blank">
-                <button>RESUME</button>
+                <button class="resume">RESUME</button>
              </a>
              </div>
           </div>
+      </section>
 
       
 
@@ -112,6 +114,8 @@
 
 
       <!-- ABOUT SECTION -->
+      <section class="about-me">
+        <div class="wrapper">
       <div class="about-section" id="about">
         <h2>
           ABOUT ME
@@ -123,6 +127,9 @@
         </p>
         <img src="/assets/profile-picture.png" alt="profile picture" class="profile-image"/>
       </div>
+    </div>
+    </div>
+ 
     
 
       <!-- Skills Section-->
@@ -148,13 +155,14 @@
          
         </div>
       </div>
+      </section>
 
       <div class="spacer"></div> 
 
 
-
-
       <!-- PORTFOLIO SECTION -->
+      <section class="portfolio">
+        <div class="wrapper">
       <div id="portfolio" class="portfolio-section">
       <h2>PROJECTS</h2>
       <hr>
@@ -168,6 +176,7 @@
           <a href="https://bookhunt-app.netlify.app/" target="_blank"><button>Live Site</button></a>
         </div>
         </div>
+        
       </div>
       <div class="project">
         <img src="./assets/portfolio-high-street-gym.png" class="project-image"/>
@@ -183,7 +192,7 @@
         <div class="content">
           <h1>ML Strength</h1>
           <div class="content-buttons">
-            <a href="https://preethapinto.github.io/MLstrength/" target="_blank"><button>GitHub Pages</button></a>
+            <a href="https://preethapinto.github.io/MLstrength/" target="_blank"><button>GitHub</button></a>
           <a href="https://github.com/PreethaPinto/MLstrength" target="_blank"><button>GitHub</button></a>
         </div>
         </div>
@@ -195,19 +204,21 @@
           <h1 class="dental-app">Dental Management App</h1>
           <h3>(in progress)</h3>
           <div class="content-buttons">
-            <a href="https://github.com/PreethaPinto/dental-management-react-typescript" target="_blank"><button>GitHub Pages</button></a>
+            <a href="https://github.com/PreethaPinto/dental-management-react-typescript" target="_blank"><button>GitHub</button></a>
         </div>
         </div>
       </div>
-      <div class="project"></div>
-    
     </div>
+  </div>
+  </section>
 
     <div class="spacer"></div>
 
 
 
       <!-- CONTACT SECTION  -->
+      <section class="contact">
+        <div class="wrapper">
       <div id="contact" class="contact-section">
         <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <div class="contact">
@@ -221,8 +232,9 @@
           <button type="submit" class="form-btn">Submit</button>
 
         </form>
-
       </div>
+      </div>
+    </section>
 
      <script type="text/javascript" src="./scripts/app.js"></script>
      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -142,6 +142,7 @@ header.sticky {
   margin-right: 20px;
 }
 .social-icons button {
+  color: #fff;
   background: #cf1b1b;
   height: 35px;
   width: 100px;
@@ -163,6 +164,16 @@ header.sticky {
 
 .icon.active {
   color: #cf1b1b;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.welcome {
+  min-height: 100%;
 }
 
 .intro {
@@ -189,9 +200,11 @@ header.sticky {
   text-decoration: none;
 }
 
-.about-section {
-  height: 100vh;
+.about-me {
+  min-height: 100vh;
+  padding-top: 20px;
 }
+
 .about-section h2 {
   font-weight: 600;
   font-size: 40px;
@@ -270,9 +283,10 @@ header.sticky {
   font-size: 4rem;
 }
 
-.portfolio-section {
-  height: 100vh;
+.portfolio {
+  height: 100%;
 }
+
 .portfolio-section h2 {
   font-weight: 600;
   font-size: 40px;
@@ -294,18 +308,22 @@ header.sticky {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 50px;
 }
 
 .project {
   width: 700px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
+  border: solid 1px #fff;
+  border-radius: 10px;
 }
 
 .project-image {
   width: 100%;
   display: block;
   margin: auto;
+  border-radius: 10px;
 }
 
 .content {
@@ -410,6 +428,7 @@ header.sticky {
   text-transform: uppercase;
 }
 .contact-section button {
+  color: #fff;
   align-self: center;
   width: 150px;
   padding: 15px;
@@ -584,6 +603,12 @@ body.light .project {
   .project-section {
     display: flex;
     flex-direction: column;
+  }
+  .project-section .project {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
   }
   .contact-section .contact-inputs {
     width: 350px;

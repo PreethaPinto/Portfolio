@@ -36,17 +36,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-//Add sticky navbar
-// document.addEventListener('scroll', () => {
-//     const header = document.querySelector('header');
-
-//     if (window.scrollY > 0) {
-//         header.classList.add('scrolled');
-//     } else {
-//         header.classList.remove('scrolled');
-//     }
-// })
-
 
 //Add light mode
 let btn = document.getElementById('btn'); 

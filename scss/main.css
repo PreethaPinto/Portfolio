@@ -610,6 +610,12 @@ body.light .project {
     display: block;
     position: relative;
   }
+  .project-section .content h1 {
+    font-size: 30px;
+  }
+  .project-section .content p {
+    font-size: 15px;
+  }
   .contact-section .contact-inputs {
     width: 350px;
   }

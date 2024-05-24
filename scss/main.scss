@@ -680,9 +680,15 @@ body.light {
       display: block;
       position: relative;
     }
-  }
+    .content h1 {
+      font-size: 30px;
+    }
 
- 
+    .content p {
+      font-size: 15px;
+    }
+
+  }
 
   .contact-section .contact-inputs {
     width: 350px;
